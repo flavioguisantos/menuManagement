@@ -8,6 +8,7 @@
 - Na raíz, instale o restante das dependências do projeto através do comando `npm install`.
 - Inicialize o projeto através do comando `npm run start`.
 - O projeto utiliza o [Nodemon](https://nodemon.io/), logo as atualizações feitas ao código durante o desenvolvimento são automaticamente capturadas, o Typescript é re-compilado e o servidor é re-criado sem intervenção manual (com exceção às alterações no arquivo `.env`. Neste caso é preciso encerrar a execução do servidor e executar o comando `npm run start` novamente).
+- O projeto possui documentação das rotas feita com swagger  [Swagger](http://localhost:8000/api/v1/swagger)
 - Caso tenha tudo ocorrido de acordo, o terminal deverá apresentar a seguinte saída:
 ```sh
 [nodemon] to restart at any time, enter `rs`
