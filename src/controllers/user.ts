@@ -12,12 +12,12 @@ export default {
     getOne: async (req: Request, res: Response): Promise<Response> => {
         const user = await User.findOne({ _id: req.params.id })
 
-        return res.json(user)
+        return res.status(200).json(user)
     },
     getAll: async (_: Request, res: Response): Promise<Response> => {
         const user = await User.find()
 
-        return res.json(user)
+        return res.status(200).json(user)
     },
     update: async (req: Request, res: Response): Promise<Response> => {
         const user = await User.findOne({ _id: req.params.id })
@@ -25,7 +25,7 @@ export default {
             return res.status(400).json({ message: 'User not found' })
 
         await User.updateOne({ id: user.id }, req.body)
-        return res.json({
+        return res.status(200).json({
             id: user.id,
         })
     },
@@ -35,7 +35,7 @@ export default {
             return res.status(400).json({ message: 'User not found' })
 
         await User.deleteOne({ id: user.id })
-        return res.json({
+        return res.status(200).json({
             id: user.id,
         })
     },
