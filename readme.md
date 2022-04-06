@@ -3,6 +3,7 @@
 - O menu compõe-se apenas de itens e sub-itens. A ideia é que dentro de cada item do menu, é possível cadastrar infinitos sub-itens.
 - O menu possuir aninhamento infinito.
 - O Cadastro é feito por item; cada item é independente. Isto quer dizer que cada item é registrado como um registro único no banco de dados.
+- A API esta on-line no Heroku [Heroku](https://management-menu-01.herokuapp.com/api/v1/swagger/)
 # Como configurar o projeto?
 - Certifique-se que tem as dependências [npm](https://www.npmjs.com/) (>= 6.x) e [Node.js](https://nodejs.org/) (>= 14.x) instaladas localmente.
 - Este projeto utiliza Node.js com [Typescript](https://www.typescriptlang.org/).
@@ -14,7 +15,6 @@
 - Inicialize o projeto através do comando `npm run start`.
 - O projeto utiliza o [Nodemon](https://nodemon.io/), logo as atualizações feitas ao código durante o desenvolvimento são automaticamente capturadas, o Typescript é re-compilado e o servidor é re-criado sem intervenção manual (com exceção às alterações no arquivo `.env`. Neste caso é preciso encerrar a execução do servidor e executar o comando `npm run start` novamente).
 - O projeto possui documentação das rotas feita com swagger [Swagger](https://management-menu-01.herokuapp.com/api/v1/swagger/)
-- A API esta on-line no Heroku [Heroku](https://management-menu-01.herokuapp.com/api/v1/swagger/)
 - Caso tenha tudo ocorrido de acordo, o terminal deverá apresentar a seguinte saída:
 ```sh
 [nodemon] to restart at any time, enter `rs`
