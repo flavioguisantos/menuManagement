@@ -1,5 +1,11 @@
+interface Menu {
+    _id: string
+    name: string,
+    relatedId?: string
+}
+
 const presenter: any = async (data: any) => {
-    const resultPresenter: any = data.map((menu: any): any => {
+    const resultPresenter: any = data.map((menu: any): Menu => {
 
         return {
             _id: menu._doc._id.toString(),

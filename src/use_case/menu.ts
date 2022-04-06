@@ -8,7 +8,7 @@ interface Menu {
 
 const createMenu: any = async (data: Array<Menu>) => {
     const newData = await presenter(data)
-    const firstLevel = newData.filter((menuDad: { relatedId: any; }) => !menuDad.relatedId)
+    const firstLevel = newData.filter((menuDad: { relatedId: string }) => !menuDad.relatedId)
     const menu = []
 
     if (firstLevel.length > 0) {
@@ -46,11 +46,9 @@ const createMenu: any = async (data: Array<Menu>) => {
 
 }
 
-
-
 const recurse: any = (data: any, id: string) => {
     const childMenu: any = []
-    const childLevel = data.filter((menuChild: any): any => menuChild.relatedId === id)
+    const childLevel = data.filter((menuChild: { relatedId: string }): any => menuChild.relatedId === id)
 
     if (childLevel.length > 0) {
 
