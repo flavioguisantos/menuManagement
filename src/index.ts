@@ -24,6 +24,7 @@ mongoose.connect(
 
 const app = express()
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use('/user', userRoutes)
 app.use('/api/v1/menu', menuRoutes)
 app.use('/api/v1/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {

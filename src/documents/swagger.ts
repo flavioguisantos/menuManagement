@@ -1,25 +1,12 @@
 
 export default {
-    "openapi": '3.0.0',
+    "swagger": "2.0",
     "info": {
-        "title": 'API Documentation - Menu',
-        "description": 'Project Menu API Documentation',
-        "contact": {
-            "name": 'Flavio Guilherme',
-            "email": 'flavio.guilherme@outlook.com.br'
-        },
-        "version": '1.0.0'
+        "title": "Menu-Api",
+        "description": "Project documentation menu",
+        "version": "1.0.0"
     },
-    "servers": [
-        {
-            "url": 'http://localhost:8000/',
-            "description": 'Development Menu API'
-        },
-        {
-            "url": process.env.API_URL_PRODUCTION,
-            "description": 'Production Menu API'
-        }
-    ],
+    "host": process.env.API_URL_PRODUCTION,
     "paths": {
         "/healthcheck": {
             "get": {

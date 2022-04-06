@@ -1,6 +1,12 @@
 import presenter from "./presenter"
+interface Menu {
+    _id: string
+    name: string,
+    __v: number,
+    relatedId?: string
+}
 
-const createMenu: any = async (data: any) => {
+const createMenu: any = async (data: Array<Menu>) => {
     const newData = await presenter(data)
     const firstLevel = newData.filter((menuDad: { relatedId: any; }) => !menuDad.relatedId)
     const menu = []
