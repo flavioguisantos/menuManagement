@@ -1,18 +1,27 @@
 
 export default {
-    "swagger": "2.0",
+    "openapi": '3.0.0',
     "info": {
-        "title": "API Documentation - Menu",
-        "description": "Project Menu API Documentation",
-        "version": "1.0.0"
+        "title": 'API Documentation - Menu',
+        "description": 'Project Menu API Documentation',
+        "contact": {
+            "name": 'Flavio Guilherme',
+            "email": 'flavio.guilherme@outlook.com.br'
+        },
+        "version": '1.0.0'
     },
-    "host": "localhost:8000/",
-    "basePath": "/",
-    "schemes": [
-        "http"
+    "servers": [
+        {
+            "url": 'http://localhost:8000/',
+            "description": 'Development Menu API'
+        },
+        {
+            "url": 'https://staging-bovmilk.bovcontrol.com/',
+            "description": 'Production Menu API'
+        }
     ],
     "paths": {
-        "healthcheck": {
+        "/healthcheck": {
             "get": {
                 "tags": [
                     "Health Check"
@@ -29,7 +38,7 @@ export default {
                 }
             }
         },
-        "api/v1/menu": {
+        "/api/v1/menu": {
             "get": {
                 "tags": [
                     "Menu"
@@ -75,7 +84,7 @@ export default {
                 }
             }
         },
-        "api/v1/menu/{id}": {
+        "/api/v1/menu/{id}": {
             "delete": {
                 "tags": [
                     "Menu"
