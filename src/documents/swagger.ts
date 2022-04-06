@@ -16,7 +16,7 @@ export default {
             "description": 'Development Menu API'
         },
         {
-            "url": 'https://staging-bovmilk.bovcontrol.com/',
+            "url": process.env.API_URL_PRODUCTION,
             "description": 'Production Menu API'
         }
     ],
