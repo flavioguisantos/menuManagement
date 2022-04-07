@@ -11,9 +11,7 @@ export default {
                 return res.status(400).json({ message: 'relatedId not found' })
 
         }
-
         const { id } = await Menu.create(req.body)
-
         return res.status(201).json({
             id,
         })
