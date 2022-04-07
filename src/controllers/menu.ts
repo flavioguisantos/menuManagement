@@ -27,7 +27,7 @@ export default {
         return res.status(200).json(resultCreatMenu)
     },
     delete: async (req: Request, res: Response): Promise<Response> => {
-        const menu = await Menu.find()
+        const menu = await Menu.find({ _id: req.params.id })
         if (!menu || !menu[0]?.id)
             return res.status(400).json({ message: 'Menu not found' })
 
