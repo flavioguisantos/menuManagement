@@ -6,7 +6,7 @@ import searchRemoveMenu from '../use_case/removeMenu'
 export default {
     create: async (req: Request, res: Response): Promise<Response> => {
         if (req.body?.relatedId) {
-            const menu = await Menu.find({ relatedId: req.body.relatedId })
+            const menu = await Menu.find({ _id: req.body.relatedId })
             if (!menu || !menu[0]?.id)
                 return res.status(400).json({ message: 'relatedId not found' })
 
