@@ -7,9 +7,8 @@ export default {
         try {
             const schema = yup.object().shape({
                 name: yup.string().required().min(3),
-                relatedId: yup.string()
+                relatedId: yup.string().min(1)
             })
-
             await schema.validate(req.body, { abortEarly: false })
             return next()
         } catch (err) {
